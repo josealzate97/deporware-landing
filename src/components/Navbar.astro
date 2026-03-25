@@ -1,0 +1,36 @@
+---
+const { currentPath = "/" } = Astro.props;
+
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/quienes-somos", label: "Quienes Somos" },
+  { href: "/valores", label: "Valores" },
+  { href: "/#contacto", label: "Contactanos" }
+];
+
+const isActive = (href) => {
+  if (href === "/") return currentPath === "/";
+  if (href.startsWith("/#")) return false;
+  return currentPath === href;
+};
+---
+
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="/">Deporware</a>
+
+    <nav aria-label="Principal">
+      <ul class="nav-list">
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href} class={isActive(link.href) ? "is-active" : undefined}>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
