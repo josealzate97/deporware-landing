@@ -7,41 +7,81 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   currentPath="/"
   description="Deporware centraliza la gestion deportiva de clubes, escuelas y academias con una experiencia clara y moderna."
 >
-  <section class="hero section">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="hero-brand">
-          <img src="/images/branding/logo/logo.png" alt="Logo Deporware" class="hero-brand-logo" />
+  <section class="hero hero-modern section">
+
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="container hero-layout">
+
+      <div class="hero-main">
+        
+        <div class="hero-badge">
+          <img src="/images/branding/logo/logo.png" alt="Deporware" />
           <span>Software para clubes y academias</span>
         </div>
 
-        <p class="eyebrow">Tecnologia deportiva para operar mejor</p>
         <h1>Ordena tu club, centraliza procesos y toma decisiones con datos.</h1>
-        <p class="lead">
-          Deporware ayuda a clubes, escuelas y academias a gestionar usuarios, fichas deportivas,
-          entrenamientos y seguimiento operativo desde un solo lugar.
-        </p>
+        <p class="lead hero-lead">Tecnologia deportiva para operar mejor.</p>
 
         <div class="hero-actions">
           <a class="button button-primary" href="#contacto">Solicitar demo</a>
           <a class="button button-secondary" href="/quienes-somos">Conocer Deporware</a>
-        </div> 
+        </div>
+
+        <div class="hero-mini-grid">
+          <article class="mini-card">
+            <p class="mini-title">Gestion de miembros</p>
+            <div class="mini-lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="mini-card">
+            <p class="mini-title">Calendario de entrenamientos</p>
+            <div class="mini-calendar">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="mini-card">
+            <p class="mini-title">Finanzas y pagos</p>
+            <div class="mini-bars">
+              <span></span><span></span><span></span>
+            </div>
+          </article>
+        </div>
       </div>
 
-      <aside class="hero-panel">
+      <aside class="hero-dashboard">
         <p class="panel-kicker">Panel central</p>
-        <h2>Una vista clara de toda tu operacion deportiva</h2>
-        <ul class="check-list">
-          <li>Usuarios y roles organizados</li>
-          <li>Fichas deportivas actualizadas</li>
-          <li>Seguimiento mas visible para cada equipo</li>
-          <li>Informacion lista para actuar</li>
-        </ul>
-
-        <div class="panel-media">
-          <img src="/images/branding/logo/logo.png" alt="Marca Deporware" class="panel-logo" />
+        <h2>Una vista clara de toda tu operacion</h2>
+        <div class="dashboard-grid">
+          <article class="dash-widget">
+            <h3>Usuarios y roles</h3>
+            <p>Jugador, entrenador, admin.</p>
+          </article>
+          <article class="dash-widget">
+            <h3>Fichas deportivas</h3>
+            <p>Seguimiento tecnico y medico.</p>
+          </article>
+          <article class="dash-widget">
+            <h3>Seguimiento visible</h3>
+            <p>Graficas para tomar decisiones.</p>
+          </article>
+          <article class="dash-widget">
+            <h3>Reportes rapidos</h3>
+            <p>Informes para tu equipo directivo.</p>
+          </article>
         </div>
+        <img src="/images/branding/logo/logo.png" alt="Logo Deporware" class="dashboard-logo" />
       </aside>
+
+      <div class="hero-side">
+        <article class="side-card side-card-top">
+          <div class="side-card-overlay"></div>
+        </article>
+        <article class="side-card side-card-bottom">
+          <div class="side-card-overlay"></div>
+        </article>
+      </div>
     </div>
   </section>
 
