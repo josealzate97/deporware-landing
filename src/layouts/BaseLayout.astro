@@ -37,6 +37,94 @@ const {
       <slot />
     </main>
 
+    <script>
+      import gsap from "gsap";
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const splitWords = (element) => {
+        const words = element.textContent?.trim().split(/\s+/) ?? [];
+        element.textContent = "";
+
+        words.forEach((word, index) => {
+          const span = document.createElement("span");
+          span.className = "hero-word";
+          span.textContent = word;
+          element.appendChild(span);
+
+          if (index < words.length - 1) {
+            element.appendChild(document.createTextNode(" "));
+          }
+        });
+
+        return element.querySelectorAll(".hero-word");
+      };
+
+      if (!reduceMotion) {
+        const animatedTypewriters = Array.from(document.querySelectorAll('[data-animate="typewriter"]'));
+        const animatedTexts = Array.from(document.querySelectorAll('[data-animate="words"]'));
+        const animatedCtas = document.querySelectorAll('[data-animate="cta"]');
+
+        if (animatedTypewriters.length > 0 || animatedTexts.length > 0 || animatedCtas.length > 0) {
+          const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+          animatedTypewriters.forEach((element, index) => {
+            const fullText = element.textContent?.trim() ?? "";
+
+            if (!fullText) {
+              return;
+            }
+
+            element.textContent = "";
+            element.classList.add("typewriter-active");
+            element.setAttribute("aria-label", fullText);
+
+            const textSpan = document.createElement("span");
+            textSpan.className = "typewriter-text";
+
+            const cursor = document.createElement("span");
+            cursor.className = "typewriter-cursor";
+            cursor.setAttribute("aria-hidden", "true");
+            cursor.textContent = "|";
+
+            element.append(textSpan, cursor);
+
+            const state = { chars: 0 };
+            const duration = Math.max(1.8, fullText.length * 0.04);
+            const position = index === 0 ? 0 : "-=0.25";
+
+            timeline.to(
+              state,
+              {
+                chars: fullText.length,
+                duration,
+                ease: "none",
+                onUpdate: () => {
+                  textSpan.textContent = fullText.slice(0, Math.floor(state.chars));
+                }
+              },
+              position
+            );
+
+            timeline.to(cursor, { opacity: 0, duration: 0.14, repeat: 5, yoyo: true, ease: "none" }, "<0.35");
+          });
+
+          animatedTexts.forEach((element, index) => {
+            const words = splitWords(element);
+            timeline.from(words, { opacity: 0, y: 34, stagger: 0.022, duration: 0.62 }, index === 0 ? "-=0.28" : "-=0.42");
+          });
+
+          if (animatedCtas.length > 0) {
+            timeline.from(
+              animatedCtas,
+              { opacity: 0, y: 18, scale: 0.92, stagger: 0.1, duration: 0.5, transformOrigin: "center center" },
+              "-=0.28"
+            );
+          }
+        }
+      }
+    </script>
+
   </body>
 
 </html>
