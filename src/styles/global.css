@@ -201,35 +201,9 @@ p {
   padding-top: 0.8rem;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 1.4rem;
-  padding: 0.72rem 1.2rem;
-  border: 1px solid rgba(216, 228, 239, 0.95);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 20px 36px rgba(22, 57, 92, 0.06);
-}
-
-.hero-badge img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-}
-
-.hero-badge span {
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
 .hero-main h1 {
-  max-width: 16ch;
-  font-size: clamp(2.7rem, 5vw, 5.2rem);
+  max-width: 13ch;
+  font-size: clamp(2rem, 4vw, 5.2rem);
 }
 
 .hero-lead {
@@ -245,6 +219,11 @@ p {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.8rem;
+}
+
+.hero-actions a {
+  width: 45%;
+  text-align: center;
 }
 
 .hero-mini-grid {
@@ -419,9 +398,15 @@ p {
   cursor: pointer;
 }
 
-.button-primary {
+.button-success {
   color: #fff;
   background: linear-gradient(135deg, var(--accent) 0%, #6bc84f 100%);
+  box-shadow: 0 16px 30px rgba(85, 179, 65, 0.22);
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, #1b3551 100%);
   box-shadow: 0 16px 30px rgba(85, 179, 65, 0.22);
 }
 
@@ -586,15 +571,6 @@ p {
   .brand-mark {
     width: 36px;
     height: 36px;
-  }
-
-  .hero-badge {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-badge span {
-    font-size: 0.67rem;
   }
 
   .hero-side {
