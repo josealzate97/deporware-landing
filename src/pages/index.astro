@@ -61,11 +61,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="hero-side">
 
         <article class="side-card side-card-top">
-          <div class="side-card-overlay"></div>
         </article>
 
         <article class="side-card side-card-bottom">
-          <div class="side-card-overlay"></div>
         </article>
 
       </div>
@@ -74,7 +72,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   </section>
 
-  <section class="section">
+  <section class="section" data-animate="feature-section">
 
     <div class="container">
 
@@ -82,7 +80,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <p class="eyebrow eyebrow-lg">Que hacemos</p>
 
-        <h2>Una base digital clara para el trabajo diario del club</h2>
+        <h2 data-animate="words">Una base digital clara para el trabajo diario del club</h2>
 
         <p class="lead">
           Diseñamos una plataforma pensada para reducir desorden operativo y mejorar la visibilidad del
@@ -93,7 +91,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div class="feature-grid">
 
-        <article class="feature-card">
+        <article class="feature-card" data-animate="feature-card">
           <div class="feature-head">
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -108,7 +106,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <p>Crea perfiles y define accesos para entrenadores, coordinadores, jugadores y directivos.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card" data-animate="feature-card">
           <div class="feature-head">
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -123,7 +121,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <p>Conserva historial, datos clave y seguimiento del desarrollo de cada deportista.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card" data-animate="feature-card">
           <div class="feature-head">
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -138,7 +136,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <p>Centraliza informacion para reducir friccion y mejorar coordinacion interna.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card" data-animate="feature-card">
           <div class="feature-head">
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -153,7 +151,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <p>Facilita el control de la actividad diaria y el seguimiento por categoria o equipo.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card" data-animate="feature-card">
           <div class="feature-head">
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -168,7 +166,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <p>Convierte datos dispersos en informacion accionable para tomar mejores decisiones.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card" data-animate="feature-card">
           <div class="feature-head">
             <span class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -192,7 +190,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="container split-grid">
 
       <div>
-        <p class="eyebrow">Quienes somos</p>
+        <p class="eyebrow eyebrow-xl">Quienes somos</p>
         <h2>Construimos herramientas utiles para personas que viven el deporte todos los dias.</h2>
       </div>
 
@@ -252,12 +250,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div>
 
-        <p class="eyebrow">Contacto</p>
+        <p class="eyebrow eyebrow-xl">Contacto</p>
         <h2>Hablemos de tu club o academia</h2>
         <p class="lead">
           Si quieres validar si Deporware encaja con tu operacion, podemos ayudarte a aterrizar el primer
           alcance de implementacion.
         </p>
+
+        <p class="social-title">Siguenos</p>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-button">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14.5 8H16V5h-2.1C11.7 5 10 6.7 10 8.9V11H8v3h2v5h3v-5h2.4l.6-3H13V9c0-.6.4-1 1-1Z" />
+            </svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-button">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="5" />
+              <circle cx="12" cy="12" r="3.5" />
+              <circle cx="17.4" cy="6.6" r="0.8" />
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-button">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6.5 9.5V18" />
+              <path d="M6.5 6.5a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8Z" />
+              <path d="M11 18v-5.1c0-2.2 3.5-2.4 3.5 0V18" />
+              <path d="M18 18v-4.9c0-4.8-7-4.6-7 0" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
 
       </div>
 

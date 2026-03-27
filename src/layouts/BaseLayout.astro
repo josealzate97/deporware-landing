@@ -64,8 +64,9 @@ const {
         const animatedTypewriters = Array.from(document.querySelectorAll('[data-animate="typewriter"]'));
         const animatedTexts = Array.from(document.querySelectorAll('[data-animate="words"]'));
         const animatedCtas = document.querySelectorAll('[data-animate="cta"]');
+        const animatedFeatureCards = document.querySelectorAll('[data-animate="feature-card"]');
 
-        if (animatedTypewriters.length > 0 || animatedTexts.length > 0 || animatedCtas.length > 0) {
+        if (animatedTypewriters.length > 0 || animatedTexts.length > 0 || animatedCtas.length > 0 || animatedFeatureCards.length > 0) {
           const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
 
           animatedTypewriters.forEach((element, index) => {
@@ -119,6 +120,14 @@ const {
               animatedCtas,
               { opacity: 0, y: 18, scale: 0.92, stagger: 0.1, duration: 0.5, transformOrigin: "center center" },
               "-=0.28"
+            );
+          }
+
+          if (animatedFeatureCards.length > 0) {
+            timeline.from(
+              animatedFeatureCards,
+              { opacity: 0, y: 26, stagger: 0.08, duration: 0.55 },
+              "-=0.2"
             );
           }
         }
