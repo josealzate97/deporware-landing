@@ -705,6 +705,13 @@ p {
   color: #111111;
 }
 
+[data-animate="feature-section"] {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(85, 179, 65, 0.18), transparent 42%),
+    radial-gradient(circle at 88% 82%, rgba(31, 119, 208, 0.18), transparent 40%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(238, 246, 255, 0.96) 100%);
+}
+
 .split-grid {
   grid-template-columns: 1fr 1fr;
 }
@@ -839,6 +846,23 @@ p {
 
 .section-story {
   padding-top: 3.2rem;
+}
+
+.about-content-shell {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(85, 179, 65, 0.15), transparent 42%),
+    radial-gradient(circle at 88% 82%, rgba(31, 119, 208, 0.14), transparent 40%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(238, 246, 255, 0.94) 100%);
+  border-top: 1px solid rgba(216, 228, 239, 0.9);
+  border-bottom: 1px solid rgba(216, 228, 239, 0.9);
+}
+
+.about-content-shell .section-story {
+  padding-bottom: 1.4rem;
+}
+
+.about-content-shell .section-capabilities {
+  padding-top: 0.8rem;
 }
 
 .story-grid {
@@ -1082,6 +1106,10 @@ p {
 
   .section-story {
     padding-top: 2.4rem;
+  }
+
+  .about-content-shell .section-story {
+    padding-bottom: 1rem;
   }
 
   .story-media {

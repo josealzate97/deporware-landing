@@ -61,76 +61,131 @@ const {
       };
 
       if (!reduceMotion) {
-        const animatedTypewriters = Array.from(document.querySelectorAll('[data-animate="typewriter"]'));
-        const animatedTexts = Array.from(document.querySelectorAll('[data-animate="words"]'));
-        const animatedCtas = document.querySelectorAll('[data-animate="cta"]');
-        const animatedFeatureCards = document.querySelectorAll('[data-animate="feature-card"]');
+        const animatedElements = Array.from(document.querySelectorAll("[data-animate]"));
+        const animatedState = new WeakSet();
 
-        if (animatedTypewriters.length > 0 || animatedTexts.length > 0 || animatedCtas.length > 0 || animatedFeatureCards.length > 0) {
-          const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+        const runTypewriter = (element) => {
+          const fullText = element.textContent?.trim() ?? "";
 
-          animatedTypewriters.forEach((element, index) => {
-            const fullText = element.textContent?.trim() ?? "";
+          if (!fullText) {
+            return;
+          }
 
-            if (!fullText) {
-              return;
+          element.textContent = "";
+          element.classList.add("typewriter-active");
+          element.setAttribute("aria-label", fullText);
+
+          const textSpan = document.createElement("span");
+          textSpan.className = "typewriter-text";
+
+          const cursor = document.createElement("span");
+          cursor.className = "typewriter-cursor";
+          cursor.setAttribute("aria-hidden", "true");
+          cursor.textContent = "|";
+
+          element.append(textSpan, cursor);
+
+          const state = { chars: 0 };
+          const duration = Math.max(2.4, fullText.length * 0.05);
+
+          const timeline = gsap.timeline({ defaults: { ease: "none" } });
+          timeline.to(state, {
+            chars: fullText.length,
+            duration,
+            ease: "none",
+            onUpdate: () => {
+              textSpan.textContent = fullText.slice(0, Math.floor(state.chars));
             }
-
-            element.textContent = "";
-            element.classList.add("typewriter-active");
-            element.setAttribute("aria-label", fullText);
-
-            const textSpan = document.createElement("span");
-            textSpan.className = "typewriter-text";
-
-            const cursor = document.createElement("span");
-            cursor.className = "typewriter-cursor";
-            cursor.setAttribute("aria-hidden", "true");
-            cursor.textContent = "|";
-
-            element.append(textSpan, cursor);
-
-            const state = { chars: 0 };
-            const duration = Math.max(1.8, fullText.length * 0.04);
-            const position = index === 0 ? 0 : "-=0.25";
-
-            timeline.to(
-              state,
-              {
-                chars: fullText.length,
-                duration,
-                ease: "none",
-                onUpdate: () => {
-                  textSpan.textContent = fullText.slice(0, Math.floor(state.chars));
-                }
-              },
-              position
-            );
-
-            timeline.to(cursor, { opacity: 0, duration: 0.14, repeat: 5, yoyo: true, ease: "none" }, "<0.35");
           });
+          timeline.to(cursor, { opacity: 0.5, duration: 0.25, ease: "none" }, "<0.1");
+        };
 
-          animatedTexts.forEach((element, index) => {
-            const words = splitWords(element);
-            timeline.from(words, { opacity: 0, y: 34, stagger: 0.022, duration: 0.62 }, index === 0 ? "-=0.28" : "-=0.42");
-          });
+        const runWords = (element, isHeroTitle = false) => {
+          const words = splitWords(element);
 
-          if (animatedCtas.length > 0) {
-            timeline.from(
-              animatedCtas,
-              { opacity: 0, y: 18, scale: 0.92, stagger: 0.1, duration: 0.5, transformOrigin: "center center" },
-              "-=0.28"
-            );
+          if (isHeroTitle) {
+            gsap.from(words, {
+              opacity: 0,
+              y: 6,
+              stagger: 0.018,
+              duration: 0.72,
+              ease: "power1.out"
+            });
+            return;
           }
 
-          if (animatedFeatureCards.length > 0) {
-            timeline.from(
-              animatedFeatureCards,
-              { opacity: 0, y: 26, stagger: 0.08, duration: 0.55 },
-              "-=0.2"
-            );
+          gsap.from(words, {
+            opacity: 0,
+            y: 6,
+            stagger: 0.012,
+            duration: 0.62,
+            ease: "power1.out"
+          });
+        };
+
+        const runAnimation = (element) => {
+          if (animatedState.has(element)) {
+            return;
           }
-        }
+
+          const type = element.getAttribute("data-animate");
+          animatedState.add(element);
+
+          if (type === "typewriter") {
+            runTypewriter(element);
+            return;
+          }
+
+          if (type === "words") {
+            runWords(element, false);
+            return;
+          }
+
+          if (type === "hero-title") {
+            runWords(element, true);
+            return;
+          }
+
+          if (type === "cta") {
+            gsap.from(element, {
+              opacity: 0,
+              y: 6,
+              duration: 0.52,
+              transformOrigin: "center center",
+              ease: "power1.out"
+            });
+            return;
+          }
+
+          if (type === "feature-card") {
+            gsap.from(element, {
+              opacity: 0,
+              y: 6,
+              duration: 0.58,
+              ease: "power1.out"
+            });
+          }
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              runAnimation(entry.target);
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            // Trigger when elements reach around mid-screen while scrolling
+            rootMargin: "0px 0px -45% 0px",
+            threshold: 0.1
+          }
+        );
+
+        animatedElements.forEach((element) => observer.observe(element));
       }
     </script>
 
