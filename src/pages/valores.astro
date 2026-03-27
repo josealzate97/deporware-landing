@@ -7,7 +7,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   currentPath="/valores"
   description="Mision, vision y principios que guian a Deporware."
 >
-  <section class="page-hero section">
+  <section class="page-hero page-hero-bg3 section">
     <div class="container narrow">
       <p class="eyebrow">Valores</p>
       <h1 data-animate="words">Mision, vision y principios que guian a Deporware.</h1>
@@ -18,31 +18,73 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="section">
-    <div class="container value-stack">
-      <article class="value-card">
-        <h2 data-animate="words">Mision</h2>
-        <p>
-          Brindar a clubes y escuelas un sistema claro para gestionar usuarios, fichas deportivas,
-          entrenamientos y procesos operativos desde un solo lugar.
-        </p>
-      </article>
+  <div class="values-shell">
+    <section class="section">
+      <div class="container value-grid">
+        <article class="value-card value-card-main">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3.5 5 6.5v5.8c0 4.3 3 7.7 7 8.7 4-1 7-4.4 7-8.7V6.5l-7-3Z" />
+                <path d="M8 12.5h8" />
+              </svg>
+            </span>
+            <h2 data-animate="words">Mision</h2>
+          </div>
+          <p>
+            Desarrollar soluciones tecnologicas innovadoras que faciliten la gestion y organizacion de
+            escuelas de formacion y clubes deportivos, proporcionando herramientas que permitan optimizar la
+            planificacion de entrenamientos, la administracion de la informacion y el seguimiento de
+            deportistas y equipos. Nuestro compromiso es apoyar a entrenadores, coordinadores y
+            administradores mediante sistemas eficientes y faciles de usar que mejoren los procesos
+            administrativos y deportivos, contribuyendo asi al crecimiento, la modernizacion y el desarrollo
+            de las instituciones deportivas.
+          </p>
+        </article>
 
-      <article class="value-card">
-        <h2 data-animate="words">Vision</h2>
-        <p>
-          Ser una plataforma referente en gestion deportiva para organizaciones que buscan orden, control y
-          decisiones respaldadas por datos.
-        </p>
-      </article>
+        <article class="value-card value-card-main">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 17.5h16" />
+                <path d="M7.5 14v-4" />
+                <path d="M12 14V7" />
+                <path d="M16.5 14V9.5" />
+              </svg>
+            </span>
+            <h2 data-animate="words">Vision</h2>
+          </div>
+          <p>
+            Ser una empresa reconocida por el desarrollo de soluciones tecnologicas innovadoras para la
+            gestion deportiva, contribuyendo a la modernizacion y crecimiento de escuelas de formacion y
+            clubes deportivos. Buscamos posicionarnos como un referente en el sector, ofreciendo herramientas
+            eficientes que faciliten la organizacion, planificacion y toma de decisiones dentro de las
+            instituciones deportivas.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <article class="value-card">
-        <h2 data-animate="words">Principios</h2>
-        <p>
-          Diseñar con claridad, construir con enfoque practico y mantener la tecnologia al servicio de la
-          operacion real del deporte.
-        </p>
-      </article>
-    </div>
-  </section>
+    <section class="section section-values-projection">
+      <div class="container projection-grid">
+        <article class="value-card projection-card">
+          <h3>Nuestras proyecciones</h3>
+          <ul class="projection-list">
+            <li>Ampliar la adopcion de la plataforma en mas escuelas y clubes de formacion.</li>
+            <li>Incorporar analitica deportiva para decisiones tecnicas y administrativas mas precisas.</li>
+            <li>Fortalecer procesos de seguimiento integral para deportistas, equipos y cuerpo tecnico.</li>
+          </ul>
+        </article>
+
+        <article class="value-card projection-card">
+          <h3>Compromiso continuo</h3>
+          <ul class="projection-list">
+            <li>Mejorar la experiencia de uso con flujos simples y enfocados en operacion real.</li>
+            <li>Asegurar evoluciones constantes basadas en necesidades de coordinadores y entrenadores.</li>
+            <li>Mantener una base tecnologica segura, estable y preparada para crecer con cada institucion.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </div>
 </BaseLayout>
