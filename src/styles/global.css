@@ -60,6 +60,15 @@ main {
   border-bottom: 1px solid rgba(216, 228, 239, 0.9);
 }
 
+.section-about-bg {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url("/images/backgrounds/bg_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   font-size: 0.8rem;
@@ -125,14 +134,18 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(85, 179, 65, 0.16);
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: -0.04em;
+  color: #16385c;
 }
 
 .brand-mark {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 
@@ -155,13 +168,17 @@ p {
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #111111;
 }
 
-.nav-list a:hover,
+.nav-list a:hover {
+  color: #0f1720;
+  background: rgba(85, 179, 65, 0.2);
+}
+
 .nav-list a.is-active {
-  color: var(--text);
-  background: rgba(85, 179, 65, 0.12);
+  color: #0a2f08;
+  background: rgba(85, 179, 65, 0.16);
 }
 
 .hero {
@@ -171,7 +188,13 @@ p {
 }
 
 .hero-modern {
-  background: linear-gradient(90deg, rgba(106, 189, 84, 0.12) 0%, rgba(255, 255, 255, 0.8) 36%, rgba(255, 255, 255, 0.92) 100%);
+  background:
+    linear-gradient(90deg, rgba(247, 251, 255, 0.66) 0%, rgba(246, 250, 254, 0.42) 40%, rgba(246, 249, 253, 0.58) 100%),
+    radial-gradient(circle at 14% 42%, rgba(106, 189, 84, 0.1), transparent 34%),
+    url("/images/backgrounds/bg_hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-glow {
@@ -435,8 +458,8 @@ p {
 
 .button-primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--accent) 0%, #1b3551 100%);
-  box-shadow: 0 16px 30px rgba(85, 179, 65, 0.22);
+  background: linear-gradient(135deg, #1f77d0 0%, #1b3551 100%);
+  box-shadow: 0 16px 30px rgba(31, 119, 208, 0.24);
 }
 
 .button-secondary {
@@ -470,6 +493,15 @@ p {
 .eyebrow-lg {
   font-size: 1.03rem;
   letter-spacing: 0.24em;
+}
+
+.eyebrow-block-title {
+  margin-top: 0.8rem;
+  margin-bottom: 0.9rem;
+  font-size: clamp(1.4rem, 2.4vw, 2.15rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--accent-dark);
 }
 
 .section-heading {
@@ -557,6 +589,19 @@ p {
 
 .page-hero {
   padding: 6rem 0 2rem;
+}
+
+.page-hero .eyebrow {
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: var(--accent-dark);
+}
+
+.page-hero .lead {
+  font-size: clamp(1rem, 1.3vw, 1.22rem);
+  line-height: 1.65;
+  max-width: 50ch;
 }
 
 .prose-flow {
