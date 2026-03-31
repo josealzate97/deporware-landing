@@ -1629,19 +1629,44 @@ p {
   font-size: 0.95rem;
 }
 
-.final-cta-shell {
-  display: grid;
-  gap: 0.95rem;
-  justify-items: start;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(208, 223, 236, 0.95);
-  border-radius: 24px;
-  padding: 1.5rem 1.3rem;
+.section-cta-final {
+  background:
+    linear-gradient(108deg, rgba(12, 37, 64, 0.88) 0%, rgba(22, 57, 92, 0.82) 100%),
+    url("/images/backgrounds/bg_3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
 }
 
-.final-cta-shell h2 {
+.final-cta-shell {
+  display: grid;
+  gap: 1.1rem;
+  justify-items: start;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.section-cta-final .eyebrow {
+  color: var(--accent);
+}
+
+.section-cta-final .final-cta-shell h2 {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.12;
+  max-width: 28ch;
   margin: 0;
-  max-width: 32ch;
+}
+
+.final-cta-lead {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 46ch;
+  margin: 0;
 }
 
 .value-action-grid {
