@@ -16,6 +16,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="hero-main">
 
         <h1 data-animate="hero-title">Ordena tu club, centraliza procesos y toma decisiones con datos.</h1>
+        
 
       </div>
 
@@ -27,29 +28,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <div class="dashboard-grid">
 
-          <article class="dash-widget">
+          <article class="dash-widget" aria-label="Usuarios y roles: Jugador, entrenador, admin.">
             <h3>Usuarios y roles</h3>
             <p>Jugador, entrenador, admin.</p>
           </article>
 
-          <article class="dash-widget">
+          <article class="dash-widget" aria-label="Fichas deportivas: seguimiento técnico y médico">
             <h3>Fichas deportivas</h3>
             <p>Seguimiento tecnico y medico.</p>
           </article>
 
-          <article class="dash-widget">
+          <article class="dash-widget" aria-label="Seguimiento visible: graficas para decisiones">
             <h3>Seguimiento visible</h3>
             <p>Graficas para tomar decisiones.</p>
           </article>
 
-          <article class="dash-widget">
+          <article class="dash-widget" aria-label="Reportes rapidos: informes para tu equipo directivo">
             <h3>Reportes rapidos</h3>
             <p>Informes para tu equipo directivo.</p>
           </article>
 
         </div>
 
-        <img src="/images/branding/logo/logo.png" alt="Logo Deporware" class="dashboard-logo" />
+        <img src="/images/branding/logo/logo.png" alt="Logo Deporware" class="dashboard-logo" loading="lazy" />
       
       </aside>
 
@@ -260,6 +261,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <h3>Implementacion rapida</h3>
             </div>
             <p>Activacion inicial en pocas semanas con acompañamiento practico por etapas.</p>
+            <p class="outcome-meta"><strong>3 fases</strong> para desplegar sin fricciones y soporte 24/7 durante el arranque.</p>
           </article>
           <article class="differentiator-card" data-animate="feature-card">
             <div class="feature-head">
@@ -274,6 +276,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <h3>Operacion mas clara</h3>
             </div>
             <p>Menos dispersion de datos y mas visibilidad central para coordinacion tecnica y administrativa.</p>
+            <p class="outcome-meta">Paneles con datos en vivo y alertas automáticas para tomar decisiones con confianza.</p>
           </article>
           <article class="differentiator-card" data-animate="feature-card">
             <div class="feature-head">
@@ -286,6 +289,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <h3>Escalabilidad real</h3>
             </div>
             <p>Base preparada para crecer en usuarios, categorias y procesos sin perder control.</p>
+            <p class="outcome-meta"><strong>Escala sin rehacer</strong> y con gobernanza integrada para cada rol.</p>
           </article>
         </div>
       </div>
@@ -332,6 +336,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Si quieres validar si Deporware encaja con tu operacion, podemos ayudarte a aterrizar el primer
           alcance de implementacion.
         </p>
+
+        <div class="contact-meta" aria-label="Cómo trabajamos con cada club">
+          <article>
+            <strong>1.</strong>
+            <span>Revisamos tu operacion y te respondemos en menos de 24h.</span>
+          </article>
+          <article>
+            <strong>2.</strong>
+            <span>Agenda una demo guiada en tres pasos para mapear necesidades.</span>
+          </article>
+          <article>
+            <strong>3.</strong>
+            <span>Regresamos con una propuesta iterativa en 48h y acompañamiento continuo.</span>
+          </article>
+        </div>
 
         <hr class="contact-divider" />
 
