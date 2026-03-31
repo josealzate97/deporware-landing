@@ -1066,10 +1066,6 @@ p {
   line-height: 1;
 }
 
-.section-values-projection {
-  padding-top: 0.5rem;
-}
-
 .projection-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1174,10 +1170,19 @@ p {
   gap: 1rem;
 }
 
-.team-card,
 .differentiator-card,
 .faq-card {
   background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(205, 220, 231, 0.95);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.team-card {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(85, 179, 65, 0.13), transparent 48%),
+    radial-gradient(circle at 88% 85%, rgba(31, 119, 208, 0.11), transparent 44%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(236, 247, 255, 0.94) 100%);
   border: 1px solid rgba(205, 220, 231, 0.95);
   border-radius: 20px;
   padding: 1rem;
@@ -1286,6 +1291,19 @@ p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.standard-card {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(85, 179, 65, 0.14), transparent 46%),
+    radial-gradient(circle at 90% 88%, rgba(31, 119, 208, 0.12), transparent 44%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97) 0%, rgba(236, 247, 255, 0.94) 100%);
+}
+
+.standard-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 .mini-roadmap {
