@@ -9,35 +9,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 >
   <section class="page-hero page-hero-bg2 section">
 
-    <div class="container narrow">
+    <div class="hero-stage">
 
-      <p class="eyebrow">Quienes somos</p>
-
-      <h1 data-animate="words">Una empresa de tecnologia deportiva enfocada en procesos mas claros.</h1>
-      <p class="lead" data-animate="words">
-
-        Ayudamos a clubes, escuelas y academias a ordenar su operacion diaria con herramientas faciles de
-        usar y utiles para tomar decisiones.
-      </p>
+      <div class="narrow">
+        <p class="eyebrow">Quienes somos</p>
+        <h1 data-animate="words">Una empresa de tecnologia deportiva enfocada en procesos mas claros.</h1>
+        <p class="lead" data-animate="words">
+          Ayudamos a clubes, escuelas y academias a ordenar su operacion diaria con herramientas faciles de
+          usar y utiles para tomar decisiones.
+        </p>
         <div class="hero-cta-row">
           <a class="button button-success" href="/#contacto">Solicitar demo</a>
           <a class="button button-secondary" href="/valores">Ver nuestro enfoque</a>
         </div>
-        <div class="hero-metric-row">
-          <article class="hero-metric-card">
-            <span class="hero-metric-value">32</span>
-            <p>clubes y academias que redujeron tareas administrativas en 2025.</p>
-          </article>
-          <article class="hero-metric-card">
-            <span class="hero-metric-value">48h</span>
-            <p>de respuesta durante la fase de implementación con cada equipo.</p>
-          </article>
-          <article class="hero-metric-card">
-            <span class="hero-metric-value">100%</span>
-            <p>de seguimiento continuo en tablero único para directivos y entrenadores.</p>
-          </article>
-        </div>
-      
+      </div>
+
+      <div class="hero-metric-col">
+        <article class="hero-metric-card">
+          <span class="hero-metric-value">Sin caos</span>
+          <p>Toda la operación del club en un solo lugar, sin saltar entre hojas de cálculo ni grupos de WhatsApp.</p>
+        </article>
+        <article class="hero-metric-card">
+          <span class="hero-metric-value">Sin pérdidas</span>
+          <p>Pagos, asistencia y renovaciones bajo control para que nada se escape entre reuniones.</p>
+        </article>
+        <article class="hero-metric-card">
+          <span class="hero-metric-value">Con datos</span>
+          <p>Decisiones respaldadas por información real, no por intuición ni reportes de última hora.</p>
+        </article>
+      </div>
+
     </div>
 
   </section>
@@ -147,7 +148,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </section>
   </div>
 
-  <section class="section section-tint">
+  <section class="section section-about-bg">
+    <div class="container">
+      <p class="eyebrow eyebrow-block-title">Lo que nos define</p>
+      <h2 class="section-title">Tres principios que guian cada decision</h2>
+    </div>
     <div class="container feature-grid">
       <article class="feature-card">
         <div class="feature-head">
