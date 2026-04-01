@@ -8,13 +8,59 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Mision, vision y principios que guian a Deporware."
 >
   <section class="page-hero page-hero-bg3 section">
-    <div class="container narrow">
-      <p class="eyebrow">Valores</p>
-      <h1 data-animate="words">Mision, vision y principios que guian a Deporware.</h1>
-      <p class="lead" data-animate="words">
-        Queremos construir una base digital confiable para equipos que necesitan gestionar mejor su
-        informacion deportiva.
-      </p>
+    <div class="hero-stage">
+
+      <div class="narrow">
+        <p class="eyebrow">Valores</p>
+        <h1 data-animate="words">Mision, vision y principios que guian a Deporware.</h1>
+        <p class="lead" data-animate="words">
+          Queremos construir una base digital confiable para equipos que necesitan gestionar mejor su
+          informacion deportiva.
+        </p>
+        <div class="hero-cta-row">
+          <a class="button button-success" href="/#contacto">Solicitar demo</a>
+          <a class="button button-secondary" href="/quienes-somos">Conocer Deporware</a>
+        </div>
+      </div>
+
+      <div class="hero-metric-col">
+        <article class="hero-metric-card">
+          <div class="hero-metric-head">
+            <span class="hero-metric-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </span>
+            <span class="hero-metric-value">Claridad</span>
+          </div>
+          <p>Estandarizamos datos para que cada decision deportiva tenga contexto y trazabilidad real.</p>
+        </article>
+        <article class="hero-metric-card">
+          <div class="hero-metric-head">
+            <span class="hero-metric-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M13 2 4.09 12.56a1 1 0 0 0 .78 1.63L9 14l-2 8 10.91-10.56a1 1 0 0 0-.78-1.63L13 10l2-8Z" />
+              </svg>
+            </span>
+            <span class="hero-metric-value">Utilidad</span>
+          </div>
+          <p>Funciones aplicables al dia a dia de entrenadores, coordinadores y administradores del club.</p>
+        </article>
+        <article class="hero-metric-card">
+          <div class="hero-metric-head">
+            <span class="hero-metric-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M2 18 9 11l4 4L22 6" />
+                <path d="M16 6h6v6" />
+              </svg>
+            </span>
+            <span class="hero-metric-value">Evolucion</span>
+          </div>
+          <p>Mejora continua basada en feedback operativo para mantener la plataforma viva y efectiva.</p>
+        </article>
+      </div>
+
     </div>
   </section>
 
@@ -67,9 +113,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   </div>
 
-  <section class="section">
+  <section class="section section-bg-field">
     <div class="container">
-      <div class="section-heading">
+      <div class="section-heading section-heading-over-bg">
         <p class="eyebrow eyebrow-lg">Principios</p>
         <h2 data-animate="words">Valores que guian cada decision</h2>
         <p class="lead">
@@ -117,9 +163,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="section section-tint section-bg-field">
+  <section class="section section-hoja-grad">
     <div class="container">
-      <div class="section-heading section-heading-over-bg">
+      <div class="section-heading">
         <p class="eyebrow eyebrow-lg">Hoja de ruta</p>
         <h2 data-animate="words">Como avanzamos y lo que viene</h2>
         <p class="lead">Proyecciones, estandares y el roadmap que definen nuestra evolucion como plataforma deportiva.</p>

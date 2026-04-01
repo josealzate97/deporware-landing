@@ -70,6 +70,18 @@ main {
   border-bottom: none;
 }
 
+.section-hoja-grad {
+  background: linear-gradient(
+    135deg,
+    rgba(224, 238, 252, 0.95) 0%,
+    rgba(212, 235, 248, 0.9) 30%,
+    rgba(220, 245, 232, 0.85) 65%,
+    rgba(228, 242, 252, 0.92) 100%
+  );
+  border-top: 1px solid rgba(180, 210, 235, 0.7);
+  border-bottom: 1px solid rgba(180, 210, 235, 0.7);
+}
+
 .section-faq-grad {
   background: linear-gradient(
     135deg,
@@ -177,7 +189,7 @@ p {
   gap: 0.85rem;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  background: rgba(85, 179, 65, 0.16);
+  background: transparent;
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -929,8 +941,8 @@ p {
 
 .page-hero-bg3 {
   background:
-    linear-gradient(108deg, rgba(232, 241, 250, 0.74) 0%, rgba(220, 233, 246, 0.62) 45%, rgba(228, 238, 249, 0.66) 100%),
-    url("/images/backgrounds/bg_3.jpg");
+    linear-gradient(108deg, rgba(220, 238, 250, 0.55) 0%, rgba(210, 232, 248, 0.42) 45%, rgba(218, 236, 248, 0.48) 100%),
+    url("/images/backgrounds/bg_1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -940,17 +952,81 @@ p {
 }
 
 .page-hero-bg3 .narrow {
-  max-width: 760px;
-  background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(245, 250, 255, 0.84));
+  max-width: 680px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.92), rgba(245, 250, 255, 0.88));
   border: 1px solid rgba(170, 196, 218, 0.5);
   border-radius: 30px;
-  padding: 2.2rem 2.3rem;
+  padding: 2.4rem 2.6rem;
   box-shadow: 0 22px 46px rgba(20, 52, 82, 0.2);
   backdrop-filter: blur(4px);
-  margin-left: clamp(1rem, 7vw, 7rem);
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
+}
+
+.valores-hero-stage {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.valores-hero-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.valor-pill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 250, 255, 0.84) 100%);
+  border: 1px solid rgba(170, 210, 235, 0.6);
+  border-radius: 18px;
+  padding: 1rem 1.2rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 28px rgba(20, 52, 82, 0.12);
+}
+
+.valor-pill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(22, 57, 92, 0.1) 0%, rgba(85, 179, 65, 0.14) 100%);
+  border: 1px solid rgba(205, 220, 231, 0.8);
+  flex-shrink: 0;
+}
+
+.valor-pill-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #16395c;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.valor-pill-label {
+  margin: 0 0 0.15rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #16385c;
+  letter-spacing: 0.02em;
+}
+
+.valor-pill-desc {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #3a5470;
+  line-height: 1.4;
 }
 
 .page-hero-bg2 .narrow {
@@ -1060,7 +1136,8 @@ p {
   padding: 1.3rem 1.4rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0;
   box-shadow: 0 24px 48px rgba(12, 37, 64, 0.35);
   position: relative;
   overflow: hidden;
@@ -1168,6 +1245,34 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: none;
   box-shadow: none;
+}
+
+.hero-metric-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.35rem;
+}
+
+.hero-metric-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(85, 179, 65, 0.18);
+  flex-shrink: 0;
+}
+
+.hero-metric-icon svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--accent);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .hero-metric-card:first-child {
