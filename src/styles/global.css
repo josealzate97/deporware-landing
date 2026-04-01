@@ -60,6 +60,25 @@ main {
   border-bottom: 1px solid rgba(216, 228, 239, 0.9);
 }
 
+.section-bg-field {
+  background:
+    linear-gradient(rgba(8, 22, 40, 0.74), rgba(8, 22, 40, 0.74)),
+    url("/images/backgrounds/bg_hero.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top: none;
+  border-bottom: none;
+}
+
+.section-heading-over-bg h2,
+.section-heading-over-bg .lead {
+  color: #fff;
+}
+
+.section-heading-over-bg .eyebrow {
+  color: rgba(130, 210, 170, 0.95);
+}
+
 .section-about-bg {
   background:
     linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
@@ -593,9 +612,11 @@ p {
 
 .side-card-bottom {
   background:
-    linear-gradient(120deg, rgba(23, 47, 74, 0.6), rgba(33, 83, 117, 0.12)),
-    radial-gradient(circle at 30% 20%, rgba(236, 247, 255, 0.28), transparent 30%),
-    linear-gradient(140deg, #7fa0b8 0%, #d9e7ef 58%, #5d8199 100%);
+    linear-gradient(120deg, rgba(23, 47, 74, 0.5), rgba(33, 83, 117, 0.18)),
+    url("/images/content/sections/section_3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .side-card-overlay {
