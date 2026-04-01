@@ -1555,8 +1555,35 @@ p {
 .faq-card {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(205, 220, 231, 0.95);
+  border-top: 3px solid rgba(31, 119, 208, 0.45);
   border-radius: 20px;
-  padding: 1rem;
+  padding: 1.25rem 1.1rem 1.1rem;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.faq-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(20, 53, 94, 0.12);
+}
+
+.faq-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22, 57, 92, 0.08);
+  margin-bottom: 0.75rem;
+}
+
+.faq-icon-wrap svg {
+  width: 20px;
+  height: 20px;
+  stroke: #16395c;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .team-card {
@@ -1566,7 +1593,67 @@ p {
     linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(236, 247, 255, 0.94) 100%);
   border: 1px solid rgba(205, 220, 231, 0.95);
   border-radius: 20px;
-  padding: 1rem;
+  padding: 1.4rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 48px rgba(20, 53, 94, 0.14);
+}
+
+.team-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(22, 57, 92, 0.1) 0%, rgba(85, 179, 65, 0.12) 100%);
+  border: 1px solid rgba(205, 220, 231, 0.8);
+  flex-shrink: 0;
+}
+
+.team-avatar svg {
+  width: 26px;
+  height: 26px;
+  stroke: #16395c;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.team-info h3 {
+  margin: 0;
+}
+
+.team-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.team-tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: rgba(22, 57, 92, 0.08);
+  color: #16395c;
+  border: 1px solid rgba(22, 57, 92, 0.15);
 }
 
 .team-card p,
