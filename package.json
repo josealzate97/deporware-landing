@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "bot:dev": "node --watch --env-file=.env bot/server.mjs",
+    "bot:start": "node --env-file=.env bot/server.mjs"
   },
   "dependencies": {
     "astro": "^6.0.6",
