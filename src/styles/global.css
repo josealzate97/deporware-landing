@@ -832,9 +832,9 @@ p {
 
 .about-cta {
   margin-top: 1rem;
-  min-height: 50px;
-  padding: 0 1.5rem;
-  font-size: 0.9rem;
+  min-height: 52px;
+  padding: 0 2rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
 }
 
@@ -1679,6 +1679,9 @@ p {
   padding: 1rem;
   box-shadow: 0 24px 50px rgba(20, 53, 94, 0.12);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .differentiator-card:hover {
@@ -1800,6 +1803,10 @@ p {
   color: #111111;
 }
 
+.differentiator-card > p:not(.outcome-meta) {
+  margin-bottom: auto;
+}
+
 .differentiator-shell .eyebrow-block-title {
   font-size: clamp(1.25rem, 2vw, 1.9rem);
 }
@@ -1824,7 +1831,8 @@ p {
 }
 
 .outcome-meta {
-  margin-top: 0.55rem;
+  margin-top: 50px !important;
+  padding-top: 0.55rem;
   font-size: 0.95rem;
   line-height: 1.4;
   color: #11436b;
