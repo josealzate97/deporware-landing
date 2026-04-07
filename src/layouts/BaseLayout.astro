@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import WhatsAppFloatButton from "../components/WhatsAppFloatButton.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -36,6 +37,8 @@ const {
     <main>
       <slot />
     </main>
+
+    <WhatsAppFloatButton />
 
     <script>
       import gsap from "gsap";

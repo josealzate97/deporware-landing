@@ -2024,6 +2024,40 @@ p {
   transform: translateY(-1px);
 }
 
+.whatsapp-float-button {
+  position: fixed;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(145deg, #39d05a 0%, #0faa44 100%);
+  box-shadow: 0 14px 34px rgba(13, 135, 50, 0.42);
+  z-index: 45;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.whatsapp-float-button svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+.whatsapp-float-button:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: saturate(1.06);
+  box-shadow: 0 16px 36px rgba(13, 135, 50, 0.48);
+}
+
+.whatsapp-float-button:focus-visible {
+  outline: 3px solid rgba(22, 57, 92, 0.4);
+  outline-offset: 3px;
+}
+
 @media (max-width: 960px) {
   .hero-layout,
   .hero-mini-grid,
@@ -2167,6 +2201,18 @@ p {
     height: 36px;
   }
 
+  .whatsapp-float-button {
+    right: 0.9rem;
+    bottom: 0.9rem;
+    width: 54px;
+    height: 54px;
+  }
+
+  .whatsapp-float-button svg {
+    width: 28px;
+    height: 28px;
+  }
+
   .hero-side {
     grid-template-columns: 1fr;
   }
@@ -2189,7 +2235,8 @@ p {
 
   .hero-stat-card,
   .differentiator-card,
-  .social-button {
+  .social-button,
+  .whatsapp-float-button {
     transition: none !important;
   }
 }
